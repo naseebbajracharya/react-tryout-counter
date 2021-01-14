@@ -7,13 +7,17 @@ class Counter extends Component {
         tags: ["Tag 1", "Tag 2", "Tag 3"]
     };
 
+    handleIncrement = () => {
+        console.log("Increment Clicked", this);
+    };
+
     render() { 
 
         React.createElement('h1');
         return (
             <React.Fragment>
             <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-            <button className="btn btn-secondary btn-sm">Increment</button>
+            <button onClick ={this.handleIncrement} className="btn btn-secondary btn-sm">Increment</button>
         <ul>{this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
             </React.Fragment>
         );
