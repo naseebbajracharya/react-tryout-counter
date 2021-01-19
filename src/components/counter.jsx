@@ -7,12 +7,12 @@ class Counter extends Component {
         tags: ["Tag 1", "Tag 2", "Tag 3"]
     };
 
-    handleIncrement = () => {
+    handleIncrement = product => {
         //console.log("Increment Clicked", this);
         this.setState({count: this.state.count +1 });
     };
 
-    handleDecrement = () => {
+    handleDecrement = product => {
         //console.log("Decrement Clicked", this);
         this.setState({count: this.state.count -1 });
     };
