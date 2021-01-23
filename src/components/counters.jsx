@@ -7,9 +7,9 @@ class Counters extends Component {
     render() { 
         return ( 
         <div>
-            <button onClick={this.handleReset} className="btn btn-secondary sm m-2">Reset</button>
-           {this.state.counters.map(counter => (
-               <Counter key={counter.id} onDelete={this.handleDelete} onIncrement={this.handleIncrement} counter={counter}/>
+            <button onClick={this.props.onReset} className="btn btn-secondary sm m-2">Reset</button>
+           {this.props.counters.map(counter => (
+               <Counter key={counter.id} onDelete={this.props.onDelete} onIncrement={this.props.onIncrement} counter={counter}/>
                ))}
         </div> 
         );
